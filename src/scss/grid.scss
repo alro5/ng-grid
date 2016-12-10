@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 0;
+}
+
+grid-item {
+  border: 1px solid #333;
+
+  $sizes: 11;
+  $gutters: 100;
+
+  @for $i from 0 to $gutters {
+    &.gutter--#{$i} {
+      margin: 1px * $i;
+    }
+  }
+
+  @for $i from 0 to $sizes {
+    &.size--#{$i} {
+      width: calc((100% / #{$i}));
+    }
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  p {
+    margin: 0;
+    padding: 10px;
+  }
+
+}
