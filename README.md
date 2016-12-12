@@ -32,9 +32,11 @@ gulp
 </grid>
 ```  
 
-## Grid options (as seen abose)  
+## Grid items  
 
-The `items` attribute is the array of data you want to display in the grid.
+The `items` attribute takes an array and displays it in the grid.
+
+## Grid options
 
 The grid has the following options:
 
@@ -42,5 +44,5 @@ The grid has the following options:
 - `columns` (integer)
 - `gutter` (integer)
 - `breakpoints` (array)
--- `breakAt` (integer)
--- `columns` (integer)
+- `breakAt` (integer, property of breakpoints)
+- `columns` (integer, property of breakpoints)
