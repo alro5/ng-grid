@@ -18,7 +18,7 @@ gulp
 
 ```
 <grid
-  item="$ctrl.items"
+  items="$ctrl.items"
   options="{
     gridType: 'flexbox',
     columns: 4,
@@ -34,11 +34,13 @@ gulp
 
 ## Grid options (as seen abose)  
 
+The `items` attribute is the array of data you want to display in the grid.
+
 The grid has the following options:
 
-- gridType (can be flexbox, inline-block and float)
-- columns (integer)
-- gutter (integer)
-- breakpoints (array)
--- breakAt (integer)
--- columns (integer)
+- `gridType` (can be `flexbox`, `inline-block` and `float`)
+- `columns` (integer)
+- `gutter` (integer)
+- `breakpoints` (array)
+-- `breakAt` (integer)
+-- `columns` (integer)
