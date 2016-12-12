@@ -3,15 +3,21 @@
 <head>
 	<meta charset="UTF-8">
 	<title>ng-grid</title>
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-	<link rel="stylesheet" href="/dist/css/grid.css">
 </head>
 <body ng-app="app">
 
 	<grid
-		items="$ctrl.items"
-		columns="5"
-		gutter="10">		
+		item="$ctrl.items"
+		options="{
+			gridType: 'flexbox',
+			columns: 4,
+			gutter: 10,
+			breakpoints: [
+				{ breakAt: 1024, 'columns' : 3 },
+				{ breakAt: 768, 'columns' : 2 },
+				{ breakAt: 480, 'columns' : 1 }
+			]
+		}">
 	</grid>
 	
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>

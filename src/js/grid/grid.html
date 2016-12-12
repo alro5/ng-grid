@@ -1,8 +1,10 @@
-<grid-item
+<div
+	class="grid-item"
 	content="item"
-	style="{{$ctrl.gridSize}}"
-	ng-repeat="item in $ctrl.items"
-	class="
-		gutter--{{ $ctrl.gutter }}
-	">
-</grid-item>
+	ng-repeat="item in $ctrl.items">
+	<img style="max-width: 100%;" ng-src="{{item.imageUrl}}" alt="">
+	<div class="inner">
+		<h2>{{ item.title }}</h2>
+		<p>{{ item.text }}</p>
+	</div>
+</div>
