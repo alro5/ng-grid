@@ -18,12 +18,27 @@ gulp
 
 ```
 <grid
-  items="$ctrl.items"
-  columns="5"
-  gutter="10">
+  item="$ctrl.items"
+  options="{
+    gridType: 'flexbox',
+    columns: 4,
+    gutter: 10,
+    breakpoints: [
+      { breakAt: 1024, 'columns' : 3 },
+      { breakAt: 768, 'columns' : 2 },
+      { breakAt: 480, 'columns' : 1 }
+    ]
+  }">
 </grid>
 ```  
 
-The __items__ attribute is the array of data you want to use in the grid.
-The __columns__ attribute is the amount of columns you want to have in your grid.
-The __gutter__ attribute is the amount of spacing you want inbetween each grid-item.
+## Grid options (as seen abose)  
+
+The grid has the following options:
+
+- gridType (can be flexbox, inline-block and float)
+- columns (integer)
+- gutter (integer)
+- breakpoints (array)
+-- breakAt (integer)
+-- columns (integer)
